@@ -4,7 +4,7 @@ local keymap = vim.keymap
 -- Lazy
 keymap.set("n", "<leader>l", ":Lazy<CR>", { desc = "Lazy" })
 -- Mason
-keymap.set("n", "<leader>m", ":Lazy<CR>", { desc = "Mason" })
+keymap.set("n", "<leader>m", ":Mason<CR>", { desc = "Mason" })
 
 -- Remap window navigation to <C-h>, <C-j>, <C-k>, and <C-l>
 vim.api.nvim_set_keymap('n', '<C-h>', '<C-w>h', { noremap = true, silent = true })
