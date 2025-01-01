@@ -1,5 +1,9 @@
 # My Neovim Setup
 
+https://github.com/wesenseged/nvim/blob/assets/.assets/nvim.png
+
+![Neovim Screenshot](https://github.com/wesenseged/nvim/blob/assets/.assets/nvim.png)
+
 This repository contains my personalized Neovim configuration, designed to be minimal yet feature-rich, optimized for TypeScript, HTML, CSS, Lua, Bash, and C development. It uses `lazy.nvim` for plugin management and includes a carefully curated set of plugins for productivity, aesthetics, and functionality.
 
 ## 📂 Folder Structure
@@ -61,7 +65,7 @@ Here is the list of plugins included in this setup:
 
 1. Clone this repository:
    ```bash
-   git clone https://github.com/yourusername/nvim ~/.config/nvim
+   git clone https://github.com/wesenseged/nvim ~/.config/nvim
    ```
 
 2. Remove the .git folder, so you can add it to your own repo later
