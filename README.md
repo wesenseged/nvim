@@ -107,8 +107,8 @@ Key mappings are defined in `lua/core/keymap.lua`. Here are the key mappings in 
 | `<Tab>`                   | Go to next buffer                                      |
 | `<S-Tab>`                 | Go to previous buffer                                  |
 | `<leader>bp`              | Toggle buffer pin                                      |
-| `;z`                      | Delete non-pinned buffers                              |
-| `;x`                      | Delete buffers to the left                             |
+| `;x`                      | Delete non-pinned buffers                              |
+| `;z`                      | Delete buffers to the left                             |
 | `;c`                      | Delete buffers to the right                           |
 | `[b`                      | Move buffer to the previous position                  |
 | `]b`                      | Move buffer to the next position                      |

@@ -36,11 +36,16 @@ vim.keymap.set("n", "<leader>e", ":NvimTreeToggle<CR>", { desc = "Toggle file ex
 vim.keymap.set("n", "<Tab>", ":BufferLineCycleNext<CR>", { silent = true, desc = "Go to next buffer" })
 vim.keymap.set("n", "<S-Tab>", ":BufferLineCyclePrev<CR>", { silent = true, desc = "Go to previous buffer" })
 vim.keymap.set("n", "<leader>bp", "<Cmd>BufferLineTogglePin<CR>", { silent = true, desc = "Toggle Pin" })
-vim.keymap.set("n", ";z", "<Cmd>BufferLineCloseOthers<CR>", { silent = true, desc = "Delete Non-Pinned Buffers" })
-vim.keymap.set("n", ";x", "<Cmd>BufferLineCloseLeft<CR>", { silent = true, desc = "Delete Buffers to the Left" })
+vim.keymap.set("n", ";x", "<Cmd>BufferLineCloseOthers<CR>", { silent = true, desc = "Delete Non-Pinned Buffers" })
+vim.keymap.set("n", ";z", "<Cmd>BufferLineCloseLeft<CR>", { silent = true, desc = "Delete Buffers to the Left" })
 vim.keymap.set("n", ";c", "<Cmd>BufferLineCloseRight<CR>", { silent = true, desc = "Delete Buffers to the Right" })
 vim.keymap.set("n", "[b", "<cmd>BufferLineMovePrev<cr>", { silent = true, desc = "Move buffer prev" })
 vim.keymap.set("n", "]b", "<cmd>BufferLineMoveNext<cr>", { silent = true, desc = "Move buffer next" })
+
+-- Git
+vim.keymap.set("n", "<leader>gp", ":Gitsigns preview_hunk<CR>", { desc = "Git Preview" })
+vim.keymap.set("n", "<leader>gt", ":Gitsigns toggle_current_line_blame<CR>", { desc = "Git Blame" })
+
 
 
 -- Additional plugin keymaps will be added in their respective config files
