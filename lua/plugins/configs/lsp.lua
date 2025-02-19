@@ -52,22 +52,34 @@ lspconfig.ts_ls.setup({
   end,
 })
 
+-- Vtsls Lsp Setup
+lspconfig.vtsls.setup({
+  capabilities = capabilities,
+  filetypes = { "typescript", "javascript", "typescriptreact", "javascriptreact" },
+})
+
 -- Eslint-d Lsp Setup
 lspconfig.eslint.setup({
   capabilities = capabilities,
-  -- on_attach = function(bufnr)
-  -- Auto-fix eslint issues on save
-  -- vim.api.nvim_create_autocmd("BufWritePre", {
-  --   buffer = bufnr,
-  --   command = "EslintFixAll",
-  -- })
-  -- end,
   settings = {
     eslint = {
       workingDirectory = { mode = "auto" },
     },
   },
 })
+
+-- Html Lsp Setup
+lspconfig.html.setup({
+  capabilities = capabilities,
+})
+
+-- Css Lsp Setup
+lspconfig.cssls.setup({
+  capabilities = capabilities,
+  filetypes = { "css" },
+})
+
+-- Lua Lsp Setup
 lspconfig.lua_ls.setup({
   settings = {
     Lua = {

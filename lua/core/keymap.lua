@@ -45,7 +45,8 @@ vim.keymap.set("n", "]b", "<cmd>BufferLineMoveNext<cr>", { silent = true, desc =
 -- Git
 vim.keymap.set("n", "<leader>gp", ":Gitsigns preview_hunk<CR>", { desc = "Git Preview" })
 vim.keymap.set("n", "<leader>gt", ":Gitsigns toggle_current_line_blame<CR>", { desc = "Git Blame" })
-
+vim.keymap.set("n", "<leader>gs", require("gitsigns").stage_hunk, { desc = "Stage Git hunk" })
+vim.keymap.set("n", "<leader>gr", require("gitsigns").reset_hunk, { desc = "Reset Git hunk" })
 
 
 -- Additional plugin keymaps will be added in their respective config files

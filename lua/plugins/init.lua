@@ -117,6 +117,9 @@ return {
   -- git
   {
     "lewis6991/gitsigns.nvim",
+    config = function()
+      require("plugins.configs.git")
+    end
   },
   {
     "tpope/vim-fugitive",
