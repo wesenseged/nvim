@@ -124,6 +124,44 @@ return {
   {
     "tpope/vim-fugitive",
   },
+
+  -- Copilot
+  {
+    "zbirenbaum/copilot.lua",
+    cmd = "Copilot",
+    event = "InsertEnter",
+    config = function()
+      require("copilot").setup({
+        suggestion = { enabled = false },
+        panel = { enabled = false },
+      })
+    end,
+  },
+
+  {
+    "zbirenbaum/copilot-cmp",
+    dependencies = { "zbirenbaum/copilot.lua" },
+    config = function()
+      require("copilot_cmp").setup()
+    end,
+  },
+
+  -- Neorg
+  {
+    "vhyrro/luarocks.nvim",
+    priority = 1000,
+    config = true,
+  },
+  {
+    "nvim-neorg/neorg",
+    dependencies = { "luarocks.nvim" },
+    version = "*",
+    -- config = true,
+    config = function()
+      require("plugins.configs.neorg")
+    end,
+  },
+
   -- for default options, refer to the configuration section for custom setup. config = function() require('config.trouble') end }
   {
     "folke/trouble.nvim",
@@ -145,7 +183,16 @@ return {
   },
   {
     "windwp/nvim-ts-autotag",
-    config = true,
+    config = function()
+      require('nvim-ts-autotag').setup({
+        opts = {
+          -- Defaults
+          enable_close = true,          -- Auto close tags
+          enable_rename = true,         -- Auto rename pairs of tags
+          enable_close_on_slash = false -- Auto close on trailing </
+        },
+      })
+    end,
   },
   {
     'nvim-tree/nvim-web-devicons'

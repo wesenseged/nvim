@@ -32,6 +32,8 @@ nvim
 - 🌍 **Version Control**: Integrated `gitsigns.nvim` and `vim-fugitive` for Git support.
 - 🔍 **File Navigation**: `telescope.nvim` and `nvim-tree.lua` for fast and efficient file browsing.
 - 🎨 **Visual Customization**: Beautiful colorscheme with `catppuccin.nvim`.
+- 🤖 **AI Assistance**: Integrated `copilot.nvim` for AI-powered code suggestions.
+- 📝 **Note-taking & Documentation**: `neorg.nvim` for structured notes and documentation.
 
 ## 📦 Plugin List
 
@@ -53,6 +55,8 @@ Here is the list of plugins included in this setup:
 | `gitsigns.nvim`            | Git integration                      |
 | `vim-fugitive`             | Git wrapper                          |
 | `which-key.nvim`           | Displays key bindings on the fly     |
+| `copilot.nvim`             | Ai suggestion                        |
+| `neorg.nvim`               | Notes and documentation              |
 
 ## 🛠️ Installation
 
@@ -79,7 +83,12 @@ Here is the list of plugins included in this setup:
    ```
    `lazy.nvim` will automatically install all listed plugins on first launch.
 
-3. Restart Neovim to apply the changes.
+4. Restart Neovim to apply the changes.
+
+5. Run the following command in Neovim to authenticate GitHub Copilot:
+   ```bash
+   :copilot auth
+   ```
 
 ## ⌨️ Custom Key Mappings
 
@@ -146,11 +155,12 @@ Key mappings are defined in `lua/core/keymap.lua`. Here are the key mappings in 
 | `<leader>xQ`              | Toggle quickfix list in Trouble                       |
 | `[q`                      | Previous Trouble/Quickfix item                        |
 | `]q`                      | Next Trouble/Quickfix item                            |
+| `<leader>gp`              | Preview Git hunk                                      |
+| `<leader>gt`              | Toggle Git blame                                      |
+| `<leader>gs`              | Stage Git hunk                                        |
+| `<leader>gr`              | Reset Git hunk                                        |
+
 
 ## 🤝 Contributing
 
 Feel free to fork this repository and submit a pull request with your improvements or customizations!
-
-## 📜 License
-
-This configuration is open-sourced under the MIT License. See [LICENSE](LICENSE) for details.
