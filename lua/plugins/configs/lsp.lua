@@ -2,6 +2,20 @@
 local lspconfig = require("lspconfig")
 local capabilities = require("cmp_nvim_lsp").default_capabilities()
 
+local customizations = {
+  { rule = 'style/*',   severity = 'off', fixable = true },
+  { rule = 'format/*',  severity = 'off', fixable = true },
+  { rule = '*-indent',  severity = 'off', fixable = true },
+  { rule = '*-spacing', severity = 'off', fixable = true },
+  { rule = '*-spaces',  severity = 'off', fixable = true },
+  { rule = '*-order',   severity = 'off', fixable = true },
+  { rule = '*-dangle',  severity = 'off', fixable = true },
+  { rule = '*-newline', severity = 'off', fixable = true },
+  { rule = '*quotes',   severity = 'off', fixable = true },
+  { rule = '*semi',     severity = 'off', fixable = true },
+}
+
+
 -- Global mappings
 vim.keymap.set('n', '<space>e', vim.diagnostic.open_float)
 vim.keymap.set('n', '[d', vim.diagnostic.goto_prev)
@@ -60,11 +74,33 @@ lspconfig.vtsls.setup({
 
 -- Eslint-d Lsp Setup
 lspconfig.eslint.setup({
-  capabilities = capabilities,
+  filetypes = {
+    "javascript",
+    "javascriptreact",
+    "javascript.jsx",
+    "typescript",
+    "typescriptreact",
+    "typescript.tsx",
+    "vue",
+    "html",
+    "markdown",
+    "json",
+    "jsonc",
+    "yaml",
+    "toml",
+    "xml",
+    "gql",
+    "graphql",
+    "astro",
+    "svelte",
+    "css",
+    "less",
+    "scss",
+    "pcss",
+    "postcss"
+  },
   settings = {
-    eslint = {
-      workingDirectory = { mode = "auto" },
-    },
+    rulescustomizations = customizations,
   },
 })
 

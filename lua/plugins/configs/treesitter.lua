@@ -20,10 +20,4 @@ require("nvim-ts-autotag").setup({
 
   -- Enable indentation
   indent = { enable = true },
-
-  -- Enable autotagging (w/ nvim-ts-autotag plugin)
-  autotag = { enable = true },
-
-  -- Enable auto pair (w/ nvim-autopairs plugin)
-  autopairs = { enable = true },
 })

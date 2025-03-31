@@ -184,15 +184,16 @@ return {
   {
     "windwp/nvim-ts-autotag",
     config = function()
-      require('nvim-ts-autotag').setup({
-        opts = {
-          -- Defaults
-          enable_close = true,          -- Auto close tags
-          enable_rename = true,         -- Auto rename pairs of tags
-          enable_close_on_slash = false -- Auto close on trailing </
-        },
-      })
+      require('nvim-ts-autotag').setup()
     end,
+  },
+  {
+    "kylechui/nvim-surround",
+    version = "^3.0.0",
+    event = "VeryLazy",
+    config = function()
+      require("nvim-surround").setup()
+    end
   },
   {
     'nvim-tree/nvim-web-devicons'
