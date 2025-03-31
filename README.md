@@ -46,6 +46,7 @@ Here is the list of plugins included in this setup:
 | `bufferline.nvim`          | Buffer line for better tab management|
 | `cmp-buffer`, `cmp-path`   | Completion sources for `nvim-cmp`    |
 | `nvim-cmp`                 | Autocompletion plugin                |
+| `nvim-surround`            | Easily manage surrounding characters |
 | `nvim-lspconfig`           | Simplified LSP configuration         |
 | `nvim-tree.lua`            | File explorer                        |
 | `nvim-treesitter`          | Syntax highlighting and more         |
@@ -96,39 +97,39 @@ Key mappings are defined in `lua/core/keymap.lua`. Here are the key mappings in 
 
 | Keybinding                | Description                                            |
 |---------------------------|--------------------------------------------------------|
-| `<leader>l`               | Open Lazy.nvim                                         |
-| `<leader>m`               | Open Mason.nvim                                        |
-| `<C-h>`                   | Navigate to the left window                            |
-| `<C-j>`                   | Navigate to the bottom window                          |
-| `<C-k>`                   | Navigate to the top window                             |
-| `<C-l>`                   | Navigate to the right window                           |
-| `<leader>nh`              | Clear search highlights                                |
-| `x`                       | Delete single character without copying to register    |
-| `<leader>sv`              | Split window vertically                                |
-| `<leader>sh`              | Split window horizontally                              |
-| `<leader>se`              | Make splits equal size                                 |
-| `<leader>sx`              | Close current split                                    |
-| `<leader>to`              | Open new tab                                           |
-| `<leader>tx`              | Close current tab                                      |
-| `<leader>tn`              | Go to next tab                                         |
-| `<leader>tp`              | Go to previous tab                                     |
+| `<leader>l`               | Open Lazy.nvim                                        |
+| `<leader>m`               | Open Mason.nvim                                       |
+| `<C-h>`                   | Navigate to the left window                           |
+| `<C-j>`                   | Navigate to the bottom window                         |
+| `<C-k>`                   | Navigate to the top window                            |
+| `<C-l>`                   | Navigate to the right window                          |
+| `<leader>nh`              | Clear search highlights                               |
+| `x`                       | Delete single character without copying to register   |
+| `<leader>sv`              | Split window vertically                               |
+| `<leader>sh`              | Split window horizontally                             |
+| `<leader>se`              | Make splits equal size                                |
+| `<leader>sx`              | Close current split                                   |
+| `<leader>to`              | Open new tab                                          |
+| `<leader>tx`              | Close current tab                                     |
+| `<leader>tn`              | Go to next tab                                        |
+| `<leader>tp`              | Go to previous tab                                    |
 | `<leader>e`               | Toggle NvimTree file explorer                         |
-| `<Tab>`                   | Go to next buffer                                      |
-| `<S-Tab>`                 | Go to previous buffer                                  |
-| `<leader>bp`              | Toggle buffer pin                                      |
-| `;x`                      | Delete non-pinned buffers                              |
-| `;z`                      | Delete buffers to the left                             |
+| `<Tab>`                   | Go to next buffer                                     |
+| `<S-Tab>`                 | Go to previous buffer                                 |
+| `<leader>bp`              | Toggle buffer pin                                     |
+| `;x`                      | Delete non-pinned buffers                             |
+| `;z`                      | Delete buffers to the left                            |
 | `;c`                      | Delete buffers to the right                           |
 | `[b`                      | Move buffer to the previous position                  |
 | `]b`                      | Move buffer to the next position                      |
 | `<leader>gp`              | Preview Git hunk                                      |
 | `<leader>gt`              | Toggle Git blame                                      |
-| `<space>e`                | Open diagnostics float                                 |
-| `[d`                      | Go to previous diagnostic                              |
-| `]d`                      | Go to next diagnostic                                  |
-| `<space>q`                | Set diagnostics to loclist                             |
-| `gD`                      | Go to declaration                                      |
-| `gd`                      | Go to definition                                       |
+| `<space>e`                | Open diagnostics float                                |
+| `[d`                      | Go to previous diagnostic                             |
+| `]d`                      | Go to next diagnostic                                 |
+| `<space>q`                | Set diagnostics to loclist                            |
+| `gD`                      | Go to declaration                                     |
+| `gd`                      | Go to definition                                      |
 | `K`                       | Show hover documentation                              |
 | `gi`                      | Go to implementation                                  |
 | `<C-k>`                   | Show signature help                                   |
@@ -139,14 +140,14 @@ Key mappings are defined in `lua/core/keymap.lua`. Here are the key mappings in 
 | `<space>rn`               | Rename symbol                                         |
 | `<space>ca`               | Code actions                                          |
 | `gr`                      | Show references                                       |
-| `<leader>rn`              | Incremental rename with `inc-rename.nvim`            |
+| `<leader>rn`              | Incremental rename with `inc-rename.nvim`             |
 | `<space>f`                | Format code                                           |
 | `;f`                      | Fuzzy find files in cwd                               |
 | `;r`                      | Fuzzy find recent files                               |
 | `;l`                      | Live grep in cwd                                      |
 | `;t`                      | Browse colorschemes                                   |
-| `;w`                      | Find string under cursor in cwd                      |
-| `;s`                      | Open file browser at current buffer path             |
+| `;w`                      | Find string under cursor in cwd                       |
+| `;s`                      | Open file browser at current buffer path              |
 | `<leader>xx`              | Toggle diagnostics in Trouble                         |
 | `<leader>xX`              | Toggle buffer diagnostics in Trouble                  |
 | `<leader>cs`              | Toggle symbols in Trouble                             |
@@ -159,7 +160,12 @@ Key mappings are defined in `lua/core/keymap.lua`. Here are the key mappings in 
 | `<leader>gt`              | Toggle Git blame                                      |
 | `<leader>gs`              | Stage Git hunk                                        |
 | `<leader>gr`              | Reset Git hunk                                        |
-
+| `ys<motion><char>`        | Add surrounding characters around a motion            |
+| `yss<char>`               | Add surrounding characters around a line              |
+| `ds<char>`                | Delete surrounding characters                         |
+| `cs<char1><char2>`        | Change surrounding characters                         |
+| `yS<motion><char>`        | Add surrounding characters and place on a new line    |
+| `ySS<char>`               | Add surrounding characters around a line and place on a new line |
 
 ## 🤝 Contributing
 
