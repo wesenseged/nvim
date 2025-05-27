@@ -5,6 +5,7 @@ return {
     "catppuccin/nvim",
     name = "catppuccin",
     priority = 1000,
+    lazy = false, -- colorscheme often loaded eagerly
     config = function()
       require("plugins.configs.colorscheme")
     end,
@@ -28,11 +29,14 @@ return {
   -- Essential plugins
   {
     "nvim-treesitter/nvim-treesitter",
+    event = { "BufReadPre", "BufNewFile" },
     build = ":TSUpdate",
     config = function()
       require("plugins.configs.treesitter")
     end,
   },
+
+  -- Telescope
   {
     "nvim-telescope/telescope.nvim",
     dependencies = {
@@ -47,7 +51,7 @@ return {
   -- conform
   {
     'stevearc/conform.nvim',
-    opts = {},
+    event = "BufWritePre",
     config = function()
       require('plugins.configs.conform')
     end
@@ -56,6 +60,7 @@ return {
   -- LSP & Completion
   {
     "williamboman/mason.nvim",
+    event = "VimEnter",
     config = function()
       require("mason").setup()
     end,
@@ -64,12 +69,15 @@ return {
     "williamboman/mason-lspconfig.nvim",
     config = function()
       require("mason-lspconfig").setup({
-        ensure_installed = { "ts_ls", "lua_ls", "tailwindcss", "eslint", "html", "cssls", "svelte" },
+        ensure_installed = { "html", "cssls", "tailwindcss", "lua_ls", "vtsls", "biome" },
       })
     end,
   },
+
+  -- LSP
   {
     "neovim/nvim-lspconfig",
+    event = { "BufReadPre", "BufNewFile" },
     config = function()
       require("plugins.configs.lsp")
     end,
