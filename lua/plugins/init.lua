@@ -4,7 +4,6 @@ return {
   {
     "wesenseged/stone.nvim",
     priority = 1000,
-    lazy = false,
     config = function()
       require('plugins.configs.stone')
     end
