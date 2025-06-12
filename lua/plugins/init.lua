@@ -1,16 +1,16 @@
 -- ~/.config/nvim/lua/plugins/init.lua
 return {
-  -- Colorscheme
+  -- Stone Theme
   {
-    "catppuccin/nvim",
-    name = "catppuccin",
+    "wesenseged/stone.nvim",
     priority = 1000,
-    lazy = false, -- colorscheme often loaded eagerly
+    lazy = false,
     config = function()
-      require("plugins.configs.colorscheme")
-    end,
+      require('plugins.configs.stone')
+    end
   },
 
+  -- Which Key
   {
     "folke/which-key.nvim",
     event = "VeryLazy",

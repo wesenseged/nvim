@@ -31,7 +31,7 @@ nvim
 - 🎨 **Syntax Highlighting**: `nvim-treesitter` for advanced syntax highlighting and code parsing.
 - 🌍 **Version Control**: Integrated `gitsigns.nvim` and `vim-fugitive` for Git support.
 - 🔍 **File Navigation**: `telescope.nvim` and `nvim-tree.lua` for fast and efficient file browsing.
-- 🎨 **Visual Customization**: Beautiful colorscheme with `catppuccin.nvim`.
+- 🎨 **Visual Customization**: Beautiful colorscheme with `stone.nvim`.
 - 🤖 **AI Assistance**: Integrated `copilot.nvim` for AI-powered code suggestions.
 - 📝 **Note-taking & Documentation**: `neorg.nvim` for structured notes and documentation.
 
@@ -52,7 +52,7 @@ Here is the list of plugins included in this setup:
 | `nvim-treesitter`          | Syntax highlighting and more         |
 | `plenary.nvim`             | Utility functions for plugins        |
 | `telescope.nvim`           | Fuzzy finder and picker              |
-| `catppuccin.nvim`          | Colorscheme                          |
+| `stone.nvim`               | Colorscheme                          |
 | `gitsigns.nvim`            | Git integration                      |
 | `vim-fugitive`             | Git wrapper                          |
 | `which-key.nvim`           | Displays key bindings on the fly     |
