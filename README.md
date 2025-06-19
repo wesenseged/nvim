@@ -41,6 +41,7 @@ Here is the list of plugins included in this setup:
 
 | Plugin                     | Description                           |
 |----------------------------|---------------------------------------|
+| `mini.starter`             | Fast and flexible start screen       |
 | `Comment.nvim`             | Toggle comments easily               |
 | `LuaSnip`                  | Snippet engine                       |
 | `bufferline.nvim`          | Buffer line for better tab management|
@@ -145,6 +146,7 @@ Key mappings are defined in `lua/core/keymap.lua`. Here are the key mappings in 
 | `;f`                      | Fuzzy find files in cwd                               |
 | `;r`                      | Fuzzy find recent files                               |
 | `;l`                      | Live grep in cwd                                      |
+| `;g`                      | List git status for current directory                 |
 | `;t`                      | Browse colorschemes                                   |
 | `;w`                      | Find string under cursor in cwd                       |
 | `;s`                      | Open file browser at current buffer path              |

@@ -9,6 +9,15 @@ return {
     end
   },
 
+  -- mini.starter
+  {
+    'echasnovski/mini.starter',
+    version = false,
+    config = function()
+      require('plugins.configs.dashboard')
+    end
+  },
+
   -- Which Key
   {
     "folke/which-key.nvim",

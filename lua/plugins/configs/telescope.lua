@@ -74,6 +74,7 @@ local keymap = vim.keymap
 keymap.set("n", ";f", "<cmd>Telescope find_files<cr>", { desc = "Fuzzy find files in cwd" })
 keymap.set("n", ";r", "<cmd>Telescope oldfiles<cr>", { desc = "Fuzzy find recent files" })
 keymap.set("n", ";l", "<cmd>Telescope live_grep<cr>", { desc = "Find string in cwd" })
+keymap.set("n", ";g", "<cmd>Telescope git_status<cr>", { desc = "List git status for current directory" })
 keymap.set("n", ";t", "<cmd>Telescope colorscheme<cr>", { desc = "Colorscheme browser" })
 keymap.set("n", ";w", "<cmd>Telescope grep_string<cr>", { desc = "Find string under cursor in cwd" })
 keymap.set("n", ";s", function()
