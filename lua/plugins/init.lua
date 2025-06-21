@@ -77,7 +77,8 @@ return {
     "williamboman/mason-lspconfig.nvim",
     config = function()
       require("mason-lspconfig").setup({
-        ensure_installed = { "html", "cssls", "tailwindcss", "lua_ls", "vtsls", "biome" },
+        ensure_installed = { "html", "cssls", "tailwindcss", "lua_ls", "vtsls", "zls" },
+        automatic_installation = false,
       })
     end,
   },
