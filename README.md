@@ -4,7 +4,7 @@ https://github.com/wesenseged/nvim/blob/assets/.assets/nvim.png
 
 ![Neovim Screenshot](https://github.com/wesenseged/nvim/blob/assets/.assets/nvim.png)
 
-This repository contains my personalized Neovim configuration, designed to be minimal yet feature-rich, optimized for TypeScript, HTML, CSS, Lua, Bash, and C development. It uses `lazy.nvim` for plugin management and includes a carefully curated set of plugins for productivity, aesthetics, and functionality.
+This repository contains my personalized Neovim configuration, designed to be minimal yet feature-rich, optimized for TypeScript, HTML, CSS, Lua, Bash, and zig development. It uses `lazy.nvim` for plugin management and includes a carefully curated set of plugins for productivity, aesthetics, and functionality.
 
 ## 📂 Folder Structure
 

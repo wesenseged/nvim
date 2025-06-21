@@ -13,6 +13,7 @@ require("nvim-ts-autotag").setup({
     "markdown_inline",
     "bash",
     "vim",
+    "zig"
   },
   highlight = {
     enable = true,

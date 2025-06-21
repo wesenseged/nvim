@@ -1,6 +1,7 @@
 -- ~/.config/nvim/lua/plugins/configs/cmp.lua
 local cmp = require("cmp")
 local luasnip = require("luasnip")
+local tailwind_formatter = require("tailwindcss-colorizer-cmp").formatter
 
 -- Load friendly-snippets
 require("luasnip.loaders.from_vscode").lazy_load()
@@ -24,12 +25,28 @@ cmp.setup({
     end,
   },
   formatting = {
-    format = require("tailwindcss-colorizer-cmp").formatter,
+    format = function(entry, vim_item)
+      vim_item = tailwind_formatter(entry, vim_item)
+      vim_item.dup = ({
+        copilot = 0,
+        nvim_lsp = 0,
+        luasnip = 0,
+        buffer = 0,
+        path = 0,
+      })[entry.source.name] or 0
+      return vim_item
+    end,
+    -- format = require("tailwindcss-colorizer-cmp").formatter,
   },
   preselect = cmp.PreselectMode.Item, -- Automatically select first item
   completion = {
     completeopt = "menu,menuone,noinsert",
   },
+  window = {
+    completion = cmp.config.window.bordered(),
+    documentation = cmp.config.window.bordered(),
+  },
+
   mapping = {
     -- Navigation in completion menu
     ["<C-k>"] = cmp.mapping.select_prev_item(), -- previous suggestion
