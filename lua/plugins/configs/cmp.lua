@@ -28,7 +28,6 @@ cmp.setup({
     format = function(entry, vim_item)
       vim_item = tailwind_formatter(entry, vim_item)
       vim_item.dup = ({
-        copilot = 0,
         nvim_lsp = 0,
         luasnip = 0,
         buffer = 0,
@@ -84,7 +83,6 @@ cmp.setup({
     ["<CR>"] = cmp.mapping.confirm({ select = false }),
   },
   sources = cmp.config.sources({
-    { name = "copilot" },  -- Copilot
     { name = "nvim_lsp" }, -- LSP
     { name = "luasnip" },  -- snippets
     { name = "buffer" },   -- text within current buffer

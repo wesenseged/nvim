@@ -7,7 +7,6 @@ require("conform").setup({
     typescript = { "biome" },
     typescriptreact = { "biome" },
     json = { "biome" },
-    -- markdown = { "biome" },
     lua = { "stylua" },
   },
   formatters = {

@@ -77,7 +77,7 @@ return {
     "williamboman/mason-lspconfig.nvim",
     config = function()
       require("mason-lspconfig").setup({
-        ensure_installed = { "html", "cssls", "tailwindcss", "lua_ls", "vtsls", "zls" },
+        ensure_installed = { "html", "cssls", "tailwindcss", "lua_ls", "vtsls" },
         automatic_installation = false,
       })
     end,
@@ -142,44 +142,6 @@ return {
     "tpope/vim-fugitive",
   },
 
-  -- Copilot
-  {
-    "zbirenbaum/copilot.lua",
-    cmd = "Copilot",
-    event = "InsertEnter",
-    config = function()
-      require("copilot").setup({
-        suggestion = { enabled = false },
-        panel = { enabled = false },
-      })
-    end,
-  },
-
-  {
-    "zbirenbaum/copilot-cmp",
-    dependencies = { "zbirenbaum/copilot.lua" },
-    config = function()
-      require("copilot_cmp").setup()
-    end,
-  },
-
-  -- Neorg
-  {
-    "vhyrro/luarocks.nvim",
-    priority = 1000,
-    config = true,
-  },
-  {
-    "nvim-neorg/neorg",
-    dependencies = { "luarocks.nvim" },
-    version = "*",
-    -- config = true,
-    config = function()
-      require("plugins.configs.neorg")
-    end,
-  },
-
-  -- for default options, refer to the configuration section for custom setup. config = function() require('config.trouble') end }
   {
     "folke/trouble.nvim",
     opts = {},

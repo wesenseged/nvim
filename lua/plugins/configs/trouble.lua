@@ -20,3 +20,11 @@ api.nvim_set_keymap("n", "[q",
 api.nvim_set_keymap("n", "]q",
   [[<cmd>lua if require("trouble").is_open() then require("trouble").next({ skip_groups = true, jump = true }) else pcall(vim.cmd.cnext) end<cr>]],
   { desc = "Next Trouble/Quickfix Item" })
+
+api.nvim_set_keymap("n", "gd", "<cmd>Trouble lsp_definitions toggle<cr>", { desc = "Go to Definition (Trouble)" })
+api.nvim_set_keymap("n", "gi", "<cmd>Trouble lsp_implementations toggle<cr>", { desc = "Go to Implementation (Trouble)" })
+api.nvim_set_keymap("n", "gr", "<cmd>Trouble lsp_references toggle<cr>", { desc = "Show References (Trouble)" })
+api.nvim_set_keymap("n", "gt", "<cmd>Trouble lsp_type_definitions toggle<cr>",
+  { desc = "Go to Type Definition (Trouble)" })
+api.nvim_set_keymap("n", "<leader>ci", "<cmd>Trouble lsp_incoming_calls toggle<cr>", { desc = "Incoming Calls" })
+api.nvim_set_keymap("n", "<leader>co", "<cmd>Trouble lsp_outgoing_calls toggle<cr>", { desc = "Outgoing Calls" })

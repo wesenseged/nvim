@@ -32,8 +32,6 @@ nvim
 - 🌍 **Version Control**: Integrated `gitsigns.nvim` and `vim-fugitive` for Git support.
 - 🔍 **File Navigation**: `telescope.nvim` and `nvim-tree.lua` for fast and efficient file browsing.
 - 🎨 **Visual Customization**: Beautiful colorscheme with `stone.nvim`.
-- 🤖 **AI Assistance**: Integrated `copilot.nvim` for AI-powered code suggestions.
-- 📝 **Note-taking & Documentation**: `neorg.nvim` for structured notes and documentation.
 
 ## 📦 Plugin List
 
@@ -57,8 +55,6 @@ Here is the list of plugins included in this setup:
 | `gitsigns.nvim`            | Git integration                      |
 | `vim-fugitive`             | Git wrapper                          |
 | `which-key.nvim`           | Displays key bindings on the fly     |
-| `copilot.nvim`             | Ai suggestion                        |
-| `neorg.nvim`               | Notes and documentation              |
 
 ## 🛠️ Installation
 
@@ -87,10 +83,6 @@ Here is the list of plugins included in this setup:
 
 4. Restart Neovim to apply the changes.
 
-5. Run the following command in Neovim to authenticate GitHub Copilot:
-   ```bash
-   :copilot auth
-   ```
 
 ## ⌨️ Custom Key Mappings
 
