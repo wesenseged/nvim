@@ -27,7 +27,7 @@ nvim
 
 - 🔧 **Plugin Management**: Uses `lazy.nvim` for fast and efficient plugin loading.
 - 🚀 **Language Server Protocol (LSP)**: Seamless LSP integration for enhanced coding experience.
-- ✨ **Auto-completion**: Powered by `nvim-cmp` and `LuaSnip`.
+- ✨ **Auto-completion**: Powered by `blink.cmp` and `LuaSnip`.
 - 🎨 **Syntax Highlighting**: `nvim-treesitter` for advanced syntax highlighting and code parsing.
 - 🌍 **Version Control**: Integrated `gitsigns.nvim` and `vim-fugitive` for Git support.
 - 🔍 **File Navigation**: `telescope.nvim` and `nvim-tree.lua` for fast and efficient file browsing.
@@ -43,8 +43,7 @@ Here is the list of plugins included in this setup:
 | `Comment.nvim`             | Toggle comments easily               |
 | `LuaSnip`                  | Snippet engine                       |
 | `bufferline.nvim`          | Buffer line for better tab management|
-| `cmp-buffer`, `cmp-path`   | Completion sources for `nvim-cmp`    |
-| `nvim-cmp`                 | Autocompletion plugin                |
+| `blink.cmp`                 | Autocompletion plugin                |
 | `nvim-surround`            | Easily manage surrounding characters |
 | `nvim-lspconfig`           | Simplified LSP configuration         |
 | `nvim-tree.lua`            | File explorer                        |
@@ -107,8 +106,8 @@ Key mappings are defined in `lua/core/keymap.lua`. Here are the key mappings in 
 | `<leader>tn`              | Go to next tab                                        |
 | `<leader>tp`              | Go to previous tab                                    |
 | `<leader>e`               | Toggle NvimTree file explorer                         |
-| `<Tab>`                   | Go to next buffer                                     |
-| `<S-Tab>`                 | Go to previous buffer                                 |
+| `<Ctrl n>`                | Go to next buffer                                     |
+| `<Ctrl p>`                | Go to previous buffer                                 |
 | `<leader>bp`              | Toggle buffer pin                                     |
 | `;x`                      | Delete non-pinned buffers                             |
 | `;z`                      | Delete buffers to the left                            |
@@ -160,7 +159,3 @@ Key mappings are defined in `lua/core/keymap.lua`. Here are the key mappings in 
 | `cs<char1><char2>`        | Change surrounding characters                         |
 | `yS<motion><char>`        | Add surrounding characters and place on a new line    |
 | `ySS<char>`               | Add surrounding characters around a line and place on a new line |
-
-## 🤝 Contributing
-
-Feel free to fork this repository and submit a pull request with your improvements or customizations!

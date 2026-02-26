@@ -94,20 +94,18 @@ return {
 
   -- Completion
   {
-    "hrsh7th/nvim-cmp",
-    dependencies = {
-      "hrsh7th/cmp-nvim-lsp",
-      "hrsh7th/cmp-buffer",
-      "hrsh7th/cmp-path",
-      "L3MON4D3/LuaSnip",
-      "saadparwaiz1/cmp_luasnip",
-      "rafamadriz/friendly-snippets",
-      { "roobert/tailwindcss-colorizer-cmp.nvim", config = true },
-
+    'saghen/blink.cmp',
+    version = '1.*',
+    dependencies = { 'rafamadriz/friendly-snippets', 'L3MON4D3/LuaSnip'
     },
-    config = function()
-      require("plugins.configs.cmp")
-    end,
+    opts = {
+      keymap = { preset = 'default' },
+      snippets = { preset = 'luasnip' },
+      appearance = {
+        nerd_font_variant = 'mono'
+      },
+      completion = { documentation = { auto_show = true } },
+    },
   },
 
   -- Bufferline

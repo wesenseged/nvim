@@ -1,4 +1,10 @@
-local capabilities = require("cmp_nvim_lsp").default_capabilities()
+local capabilities = require('blink.cmp').get_lsp_capabilities()
+local luasnip = require("luasnip")
+
+require("luasnip.loaders.from_vscode").lazy_load()
+
+luasnip.filetype_extend("javascriptreact", { "html", "typescript" })
+luasnip.filetype_extend("typescriptreact", { "html", "typescript" })
 
 -- Diagnostic config (same as before)
 vim.diagnostic.config({
@@ -55,7 +61,6 @@ end
 
 -- Configuration table shortcut
 local cfg = function(server_name, options)
-  -- Merge with common capabilities and on_attach
   local config = vim.tbl_deep_extend("force", {
     capabilities = capabilities,
     on_attach = on_attach,
@@ -99,7 +104,7 @@ cfg("vtsls", {
   filetypes = { "typescript", "javascript", "typescriptreact", "javascriptreact" },
 })
 
-cfg("cmake")
+-- cfg("cmake")
 
 cfg("clangd", {
   cmd = { "clangd", "--compile-commands-dir=build" },
