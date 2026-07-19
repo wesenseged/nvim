@@ -1,11 +1,11 @@
 require("conform").setup({
   formatters_by_ft = {
-    html = { "biome" },
-    css = { "biome" },
-    javascript = { "biome" },
-    javascriptreact = { "biome" },
-    typescript = { "biome" },
-    typescriptreact = { "biome" },
+    html = { "biome-check" },
+    css = { "biome-check" },
+    javascript = { "biome-check" },
+    javascriptreact = { "biome-check" },
+    typescript = { "biome-check" },
+    typescriptreact = { "biome-check" },
     json = { "biome" },
     lua = { "stylua" },
   },
@@ -20,3 +20,4 @@ require("conform").setup({
     lsp_format = "fallback",
   },
 })
+

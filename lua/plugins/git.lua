@@ -16,3 +16,4 @@ require("gitsigns").setup({
     virt_text_pos = "eol",
   },
 })
+

@@ -1,4 +1,3 @@
--- ~/.config/nvim/lua/plugins/configs/treesitter.lua
 require("nvim-ts-autotag").setup({
   ensure_installed = {
     "lua",
@@ -9,16 +8,11 @@ require("nvim-ts-autotag").setup({
     "css",
     "json",
     "yaml",
-    "markdown",
-    "markdown_inline",
     "bash",
     "vim",
     "zig"
   },
-  highlight = {
-    enable = true,
-  },
-
-  -- Enable indentation
+  highlight = { enable = true },
   indent = { enable = true },
 })
+
